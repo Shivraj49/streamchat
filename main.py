@@ -13,4 +13,4 @@ class Parameters(BaseModel):
 @app.post("/token")
 def getPreferences(parameter: Parameters):
     token = server_client.create_token(parameter.user_name)
-    return token
+    return {"token": token}
